@@ -1,3 +1,7 @@
+# https://github.com/VedaSrikantan/lab11-SS-VS.git
+# Partner 1: Sarah Spellman
+# Partner 2: Veda Srikantan
+
 import math
 """
 calculator.py

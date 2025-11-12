@@ -1,3 +1,7 @@
+# https://github.com/VedaSrikantan/lab11-SS-VS.git
+# Partner 1: Sarah Spellman
+# Partner 2: Veda Srikantan
+
 import unittest
 from calculator import *
 
@@ -11,11 +15,15 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(mul(0,5),0)
+        self.assertEqual(mul(-1,10),-10)
+        self.assertEqual(mul(5,11),55)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        self.assertEqual(div(4,2),0.5)
+        self.assertEqual(div(5,10),2)
+        self.assertEqual(div(-1,5),-5)
     # ##########################
 
     ######## Partner 2
@@ -34,21 +42,20 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            log(0,5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertAlmostEqual(hypotenuse(4,3),5)
+        self.assertAlmostEqual(hypotenuse(6,7),9.22)
+        self.assertAlmostEqual(hypotenuse(1,7),7.07)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        self.assertAlmostEqual(square_root(6),2.45)
+        self.assertEqual(square_root(4),2)
     ##########################
 
 # Do not touch this
