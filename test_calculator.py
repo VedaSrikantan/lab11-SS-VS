@@ -4,13 +4,24 @@
 
 import unittest
 from calculator import *
+#https://github.com/VedaSrikantan/lab11-SS-VS.git
+#Partner 1: Sarah Spellman
+#Partner 2: Veda Srikantan
+
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
+    def test_add(self): # 3 assertions
+        self.assertEqual(add(3,5),8)
+        self.assertEqual(add(7,-3),4)
+        self.assertEqual(add(-4,-6),-10)
     #     fill in code
 
-    # def test_subtract(self): # 3 assertions
+    def test_subtract(self):
+        self.assertEqual(sub(3, 5), -2)
+        self.assertEqual(sub(7, -3), 10)
+        self.assertEqual(sub(-4, -6), 2)
+    # 3 assertions
     #     fill in code
     # ##########################
 
@@ -27,17 +38,23 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
+        with self.assertRaises(ZeroDivisionError):
+            div(0,5)
     #     fill in code
 
-    # def test_logarithm(self): # 3 assertions
+    def test_logarithm(self):
+        self.assertEqual(log(1,11),0)
+        self.assertEqual(log(1,9),0)
+        self.assertEqual(log(1,10),0)
+    # 3 assertions
     #     fill in code
 
-    # def test_log_invalid_base(self): # 1 assertion
+    def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
+        with self.assertRaises(ValueError):
+            log(0,10)
     #     fill in code
     # ##########################
     
